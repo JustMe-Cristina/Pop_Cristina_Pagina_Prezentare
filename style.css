@@ -1,0 +1,132 @@
+/* ===== Paletă & bază ===== */
+:root{
+  --bg:#f6efe7;        /* bej cald */
+  --ink:#2e2a27;       /* text */
+  --muted:#6f6a64;     /* text secundar */
+  --accent:#c7a97a;    /* bej-auriu */
+  --accent-2:#8e6b3f;  /* accent închis */
+  --card:#ffffff;      /* panouri */
+  --line:#e8decd;      /* linii discrete */
+  --r:14px;            /* radius */
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+/* ===== Layout general (container + flex în header) ===== */
+.container{
+  max-width:1040px;
+  margin:0 auto;
+  padding:1rem 1.25rem;
+}
+
+.site-header{
+  background:linear-gradient(180deg,#fbf6ef,var(--bg));
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.brand .tagline{ margin:.25rem 0 0; color:var(--muted); font-size:.95rem; }
+
+/* ===== Navigație ===== */
+.nav{ display:flex; gap:.75rem; flex-wrap:wrap; }
+.nav a{
+  color:var(--accent-2);
+  text-decoration:none;
+  padding:.4rem .6rem;
+  border:1px solid transparent;
+  border-radius:999px;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.nav a:hover{
+  background:rgba(199,169,122,.14);
+  border-color:var(--accent);
+}
+.nav .cta-link{ background:var(--accent-2); color:#fff; border-color:var(--accent-2); }
+.nav .cta-link:hover{ background:#6f522f; }
+
+/* ===== Secțiuni (carduri) ===== */
+.card{
+  background:var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:var(--r);
+  padding:1rem 1.25rem;
+  margin:1rem 0;
+  box-shadow:0 6px 24px rgba(0,0,0,.04);
+}
+
+h1{ color:var(--accent-2); margin:.25rem 0 .5rem; }
+h2{ color:var(--accent); margin:.25rem 0 .5rem; position:relative; padding-bottom:.25rem; }
+h2::after{
+  content:""; position:absolute; left:0; bottom:-6px;
+  width:72px; height:3px; border-radius:2px; background:var(--accent); opacity:.65;
+}
+h3{ color:var(--accent-2); margin:.6rem 0 .25rem; }
+.muted{ color:var(--muted); }
+.sm{ font-size:.95rem; }
+
+/* ===== DESPRE — Flexbox responsiv ===== */
+.about{ display:flex; gap:1.25rem; align-items:flex-start; flex-wrap:wrap; }
+.about-media{
+  flex:0 0 260px;
+  margin:0; padding:.55rem; border:1px solid var(--line);
+  border-radius:12px; background:#fffdfb;
+}
+.about-media img{ display:block; width:100%; height:auto; border-radius:10px; transition:transform .25s, box-shadow .25s; }
+.about-media img:hover{ transform:scale(1.02); box-shadow:0 12px 28px rgba(0,0,0,.12); }
+.about-media figcaption{ color:var(--muted); font-size:.92rem; margin-top:.35rem; text-align:center; }
+.about-content{ flex:1 1 320px; min-width:260px; }
+
+/* Badges */
+.inline-badges{ display:flex; flex-wrap:wrap; gap:.5rem; list-style:none; padding:0; margin:.75rem 0 0; }
+.inline-badges li{
+  border:1px solid var(--line); padding:.35rem .6rem; border-radius:999px; background:#fffdfb; font-size:.92rem;
+}
+
+/* ===== Liste ===== */
+.pill-list{ display:flex; flex-wrap:wrap; gap:.5rem .6rem; list-style:none; padding:0; margin:.5rem 0 0; }
+.pill-list li{ background:#fffdfb; border:1px solid var(--line); border-radius:999px; padding:.4rem .7rem; }
+.tight{ padding-left:1.2rem; }
+.tight li{ margin:.25rem 0; }
+
+/* ===== Proiecte ===== */
+.proj{ border:1px solid var(--line); border-radius:12px; padding:.75rem .9rem; margin:.6rem 0; background:#fffdfb; }
+
+/* ===== Tabel ===== */
+.table-wrap{ overflow-x:auto; }
+table{ width:100%; border-collapse:collapse; border:1px solid #d9c8ad; }
+thead th{ background:#f2eadf; color:#4a433b; text-align:left; }
+th,td{ border:1px solid #d9c8ad; padding:.6rem; }
+
+/* ===== Form ===== */
+.form{ display:flex; flex-direction:column; gap:.8rem; }
+.field label{ display:block; font-weight:600; margin-bottom:.25rem; }
+input[type="text"], input[type="email"], textarea{
+  width:100%; padding:.65rem .75rem; border:1px solid #d6c6ad; border-radius:10px; background:#fffdfb; outline:none;
+}
+.actions{ margin-top:.3rem; }
+input[type="submit"]{
+  background:var(--accent-2); color:#fff; border:none; padding:.65rem 1.05rem; border-radius:999px; cursor:pointer;
+  transition: background .2s ease, transform .15s ease, box-shadow .2s ease;
+}
+input[type="submit"]:hover{ background:#6f522f; transform:translateY(-1px); box-shadow:0 8px 18px rgba(0,0,0,.12); }
+
+/* ===== Footer ===== */
+.site-footer{ border-top:1px solid rgba(0,0,0,.06); color:var(--muted); text-align:center; padding:.5rem 0; }
+
+/* ===== Responsive ===== */
+@media (max-width:600px){
+  .about{ flex-direction:column; }
+  .about-media{ flex-basis:auto; }
+}

@@ -1,0 +1,324 @@
+<!-- Creează un proiect web format dintr-un fișier HTML și unul CSS (fără JavaScript, PHP sau alte tehnologii), pentru o pagină de prezentare personală modernă, minimalistă și curată, în limba română, potrivită pentru recrutare în domeniul IT în anul 2025.
+
+Cerințe generale:
+	•	Folosește doar HTML5 și CSS3, cu o structură clară și semantică (<header>, <nav>, <section>, <article>, <footer>).
+	•	Pagina trebuie să fie responsivă și să folosească Flexbox pentru layout.
+	•	Stilul vizual trebuie să fie curat, aerisit și modern, cu o paletă bej minimalistă.
+	•	Fără JavaScript, fără biblioteci externe.
+
+Structura cerută a paginii:
+
+HEADER
+	•	Numele complet: Pop Cristina Maria
+	•	Titlu scurt: Studentă la Informatica Economică · Junior Developer
+	•	Meniu de navigare intern (cu link-uri către secțiunile paginii).
+	•	Favicon inclus.
+
+
+SECȚIUNILE principale ale paginii:
+	1.	Despre mine
+  •	Poza de portret (fișier: portret.jpeg) cu alt text descriptiv.
+	•	Text în română:
+„Sunt studentă la Informatica Economică în cadrul Universității „Babeș-Bolyai” din Cluj-Napoca, pasionată de învățare continuă, colaborare și impact. Îmbin competențele tehnice cu dorința de a contribui la proiecte relevante și cu sens.”
+	•	Competențe cheie prezentate ca badges (Java, C/C++, SQL, HTML & CSS, English C1, French A2).
+	•	Să fie organizat în 2 coloane cu Flexbox (poză + text).
+	2.	Priorități actuale
+	•	Listă ordonată cu 5 priorități: licența, proiecte personale, consolidarea competențelor, portofoliu pentru recrutare, stil de viață sănătos și disciplină.
+	3.	Hobby-uri și pasiuni
+	•	Listă neordonată: traveling, voluntariat, fotografie, educație, înot, spectacole live.
+	4.	Experiență & Proiecte
+	•	Include experiențele și proiectele reale:
+	•	Volunteer – „Discover Your Passion in IT” (feb. 2022 – prezent)
+	•	Java SmartStart Program – GlobalLogic (aug.–sept. 2025)
+	•	Mathematics Teacher – Ștefan Micle Middle School (sept. 2024 – sept. 2025)
+	•	Nimble – aplicație mobilă (frontend)
+	•	Erasmus+ Experience – Università di Pavia (15–19 sept. 2025)
+	5.	Educație și certificări
+	•	Universitatea Babeș-Bolyai – Business Information Systems (2023–2026)
+	•	Teacher Training Program (2023–2026)
+	•	Liceul Teoretic „Avram Iancu” – Matematică-Informatică (2019–2023)
+	•	Certificări: Cambridge C1, Java SmartStart Certificate
+	6.	Tabel experiențe și proiecte
+	•	Cu anteturi <th> și cel puțin 3 rânduri de date (ex: Erasmus+, SmartStart, DPIT).
+	•	Borduri vizibile, fundal diferit pentru antet.
+	7.	Formular de contact
+	•	Câmpuri: nume, email, mesaj.
+	•	placeholder și required pentru toate câmpurile.
+	•	Buton „Trimite” stilizat.
+	•	Fără funcționalitate reală de trimitere.
+
+FOOTER
+	•	Text cu drepturi de autor:
+„© 2025 Pop Cristina Maria. Toate drepturile rezervate.”
+
+Cerințe CSS
+
+Stilizare de bază:
+	•	Font modern, culori personalizate pentru titluri și text.
+	•	Fundal bej sau gradient subtil.
+
+Box model:
+	•	margin, padding și border pentru cel puțin 3 elemente.
+	•	Conținut centrat pe pagină.
+
+Link-uri și butoane:
+	•	Culori personalizate și efect :hover.
+	•	Butonul formularului să aibă colțuri rotunjite.
+
+Tabele și formulare:
+	•	Borduri vizibile, antet cu fundal diferit.
+	•	Câmpuri cu padding și border-radius.
+
+Layout modern:
+	•	Flexbox sau Grid pentru două coloane la secțiunea „Despre mine”.
+	•	Layout responsive — sub 600px coloanele devin una sub alta.
+
+Efecte:
+	•	Efect :hover pe imagini și butoane.
+	•	Pseudo-elemente ::before sau ::after pentru decorații subtile (de exemplu, subliniere la <h2>).
+
+Fișiere finale:
+	•	Pop_Cristina_pagina.html
+	•	style.css
+	•	favicon.ico
+	•	portret.jpeg
+
+Scop: O pagină personală modernă, curată, în limba română, potrivită pentru recrutare în domeniul Full-Stack Development sau Data, creată cu doar HTML5 și CSS3, organizată clar și estetic, fără JavaScript sau alte tehnologii.
+
+
+Vrei să îți transform acest prompt direct într-o pagină finală completă acum? (Pot să-ți dau fișierele .html și .css gata de predat 📁)
+  -->
+
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pop Cristina Maria — Prezentare</title>
+
+  <!-- CSS extern -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <meta name="description" content="Pop Cristina Maria — Business Information Systems student. Proiecte, experiență, educație și contact. Pagina personală pentru recrutare." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Pop Cristina Maria</h1>
+        <p class="tagline">Business Information Systems · Junior Developer (Full-Stack / Data)</p>
+      </div>
+
+      <nav class="nav" aria-label="Navigare principală">
+        <a href="#despre">Despre</a>
+        <a href="#prioritati">Priorități</a>
+        <a href="#hobbyuri">Hobby-uri</a>
+        <a href="#proiecte">Proiecte</a>
+        <a href="#educatie">Educație</a>
+        <a href="#tabel">Tabel</a>
+        <a href="#contact" class="cta-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- DESPRE -->
+    <section id="despre" class="card">
+      <div class="about">
+        <figure class="about-media">
+          <img src="portret.jpeg" alt="Portret — Pop Cristina Maria" />
+          <figcaption>Cluj-Napoca, România</figcaption>
+        </figure>
+
+        <article class="about-content">
+          <h2>Despre mine</h2>
+          <p>
+            Sunt studentă la <strong>Informatică Economică</strong> în cadrul Universității „Babeș-Bolyai” din Cluj-Napoca, motivată de dorința de a învăța continuu, de a colabora eficient și de a genera impact. Îmbin competențele tehnice cu pasiunea pentru proiecte relevante și valoroase.
+
+          </p>
+          <p class="muted sm">
+            Highlights: <em>Java SmartStart — GlobalLogic (Aug–Sept 2025)</em> ·
+            <em>Erasmus+ — Università di Pavia (15–19 Sept 2025)</em>
+          </p>
+
+          <aside class="mini" aria-label="Competențe cheie">
+            <ul class="inline-badges">
+              <li>Java</li><li>C/C++</li><li>SQL</li>
+              <li>HTML &amp; CSS</li><li>English C1</li><li>French A2</li>
+            </ul>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRIORITĂȚI -->
+    <section id="prioritati" class="card">
+      <h2>Priorități actuale</h2>
+      <ol class="tight">
+        <li>Finalizarea lucrării de licență (temă relevantă IT).</li>
+        <li>Proiecte personale: full-stack &amp; analiză de date.</li>
+        <li>Consolidare: HTML · CSS · JS · SQL · Java/Python.</li>
+        <li>Portofoliu pentru recrutare (GitHub &amp; LinkedIn).</li>
+        <li>Stil de viață sănătos &amp; disciplină.</li>
+      </ol>
+    </section>
+
+    <!-- HOBBY-URI -->
+    <section id="hobbyuri" class="card">
+      <h2>Hobby-uri &amp; pasiuni</h2>
+      <ul class="pill-list">
+        <li>Traveling</li><li>Voluntariat</li><li>Fotografie</li>
+        <li>Educație</li><li>Înot</li><li>Pictură</li><li>Drumeții</li><li>Politică, Istorie, Psihologie</li>
+      </ul>
+    </section>
+
+    <!-- PROIECTE / EXPERIENȚĂ -->
+    <section id="proiecte" class="card">
+      <h2>Experiență &amp; proiecte</h2>
+
+      <article class="proj">
+        <h3>Voluntariat — “Descoperă-ți Pasiunea în IT” (DPIT)</h3>
+        <p><strong>Feb 2022 – Prezent · Cluj-Napoca</strong></p>
+        <ul>
+          <li>Communication bridge între studenți și organizație; flux informațional clar.</li>
+          <li>Monitorizare progres, feedback; suport în selecția participanților.</li>
+          <li>Organizare evenimente pentru implicarea studenților în IT &amp; educație.</li>
+        </ul>
+      </article>
+
+      <article class="proj">
+        <h3>Java SmartStart Program — GlobalLogic Romania (Internship)</h3>
+        <p><strong>Aug 2025 – Sept 2025 · 8 săptămâni</strong></p>
+        <ul>
+          <li>Java Essentials, Testing (JUnit 5 &amp; Mockito), Design Patterns</li>
+          <li>Spring Boot, Hibernate, Spring Security</li>
+          <li>Kafka &amp; Microservices; mentorat, peer-reviews, proiecte practice</li>
+        </ul>
+        <p class="muted sm">Skills: Java · SQL · Backend Fundamentals</p>
+      </article>
+
+      <article class="proj">
+        <h3>Profesor de matematică — Școala Gimnazială “Ștefan Micle”, Feleacu</h3>
+        <p><strong>Sept 2024 – Sept 2025 · 1 an</strong></p>
+        <ul>
+          <li>Predare matematică (clasele V–VIII); clarificare concepte pentru profiluri diverse.</li>
+          <li>Comunicare, problem solving, mentoring &amp; leadership aplicate acum în proiecte tech.</li>
+        </ul>
+      </article>
+
+      <article class="proj">
+        <h3>Nimble — Aplicație mobilă (Frontend)</h3>
+        <p>UI/UX (Figma) &amp; Android Studio · funcționalități pentru rezervări și comenzi restaurante.</p>
+      </article>
+    </section>
+
+    <!-- EDUCAȚIE & CERTIFICĂRI -->
+    <section id="educatie" class="card">
+      <h2>Educație &amp; certificări</h2>
+
+      <article class="proj">
+        <h3>Universitatea „Babeș-Bolyai” din Cluj-Napoca</h3>
+        <p><strong>Licență — Informatică Economică</strong> · 2023–2026</p>
+        <ul>
+          <li><strong>Software Dev:</strong> Java, C, OOP, Algorithms &amp; Data Structures, Design Patterns</li>
+          <li><strong>Databases:</strong> SQL, Advanced Databases, Data Modeling</li>
+          <li><strong>Web &amp; Systems:</strong> Web Applications, Computer Networks, Distributed Systems</li>
+          <li><strong>Data &amp; Analytics:</strong> Statistics, Data Analysis, BI, AI</li>
+          <li><strong>Business:</strong> Economics, Accounting, Finance, Management</li>
+        </ul>
+      </article>
+
+      <article class="proj">
+        <h3>UBB — Program de Formare a Cadrelor Didactice</h3>
+        <p><strong>Educație</strong> · 2023–2026 — Focus: Didactică, Pedagogie, Științe Socio-Umane</p>
+      </article>
+
+      <article class="proj">
+        <h3>„Avram Iancu” Theoretical High School, Cluj-Napoca</h3>
+        <p><strong>Diplomă de Bacalaureat</strong> · 2019–2023 — Matematică-Informatică (CS intensiv)</p>
+      </article>
+
+      <article class="proj">
+        <h3>Certificări</h3>
+        <ul>
+          <li><strong>Cambridge English Certificate C1</strong> · May 2023</li>
+          <li><strong>Certificate of Completion — Java SmartStart Program</strong> (GlobalLogic)</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- TABEL -->
+    <section id="tabel" class="card">
+      <h2>Experiențe &amp; proiecte — tabel</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Perioadă</th>
+              <th>Activitate / Program</th>
+              <th>Rol</th>
+              <th>Detalii</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>15–19 Sept 2025</td>
+              <td>Erasmus+ — Università di Pavia</td>
+              <td>Participant</td>
+              <td>Inovație &amp; sustenabilitate; lucru intercultural</td>
+            </tr>
+            <tr>
+              <td>Aug–Sept 2025</td>
+              <td>Java SmartStart — GlobalLogic</td>
+              <td>Internship</td>
+              <td>Java, Testing, Spring, Microservices</td>
+            </tr>
+            <tr>
+              <td>Feb 2022–Prezent</td>
+              <td>Voluntariat — DPIT</td>
+              <td>Voluntar</td>
+              <td>Comunicare, selecție, evenimente IT</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+     
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <form class="form">
+        <p>
+      Email personal: cristinapop809@gmail.com
+     </p>
+        <div class="field">
+          <label for="nume">Nume</label>
+          <input type="text" id="nume" name="nume" placeholder="Nume complet" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="exemplu@domeniu.com" required />
+        </div>
+        <div class="field">
+          <label for="mesaj">Mesaj</label>
+          <textarea id="mesaj" name="mesaj" rows="5" placeholder="Scrie mesajul tău..." required></textarea>
+        </div>
+        <div class="actions">
+          <input type="submit" value="Trimite" />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <time datetime="2025">2025</time> Pop Cristina Maria. Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+</body>
+</html>
