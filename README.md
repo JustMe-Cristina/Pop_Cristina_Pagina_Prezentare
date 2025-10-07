@@ -15,3 +15,5 @@ Pagina este construită exclusiv cu HTML5 și CSS3 și are rol de prezentare pro
 ## 🛠️ Tehnologii folosite
 - HTML5 (semantic)
 - CSS3 (Flexbox, responsive design)
+
+
