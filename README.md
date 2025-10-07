@@ -16,4 +16,4 @@ Pagina este construită exclusiv cu HTML5 și CSS3 și are rol de prezentare pro
 - HTML5 (semantic)
 - CSS3 (Flexbox, responsive design)
 
-
+📍 [Vizitează pagina live aici](https://justmecristina.github.io/Pop_Cristina_Pagina_Prezentare/)
